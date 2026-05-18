@@ -1,0 +1,11 @@
+id_lokasi,nama_lokasi,tipe
+L001,Shanghai_1,Tujuan
+L002,Shanghai_2,Tujuan
+L003,Shanghai_3,Tujuan
+L004,Shanghai_4,Tujuan
+L005,Shanghai_5,Tujuan
+L006,Shanghai_6,Tujuan
+L007,Shanghai_7,Tujuan
+L008,Shanghai_8,Tujuan
+L009,Shanghai_9,Tujuan
+L010,Shanghai_10,Tujuan
