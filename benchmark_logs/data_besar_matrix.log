@@ -1,0 +1,127 @@
+
+========================================
+SISTEM MANAJEMEN RUTE (ADJACENCY MATRIX)
+========================================
+✅ Load 500 lokasi
+✅ Load 2000 rute
+📊 Memory Usage: 2284 KB
+
+================ MENU ================
+1. Insert Lokasi Baru
+2. Insert Rute Baru
+3. Update Lokasi
+4. Update Rute
+5. Delete Lokasi
+6. Delete Rute
+7. Cari Rute
+8. Tampil Semua Rute
+9. Tampil Semua Lokasi
+10. Simpan & Keluar
+========================================
+Pilihan: Nama Lokasi: Tipe (Gudang/Tujuan): ✅ Lokasi ditambahkan: L501 - NewLoc
+⏱️  Waktu eksekusi: 0.659 ms
+
+================ MENU ================
+1. Insert Lokasi Baru
+2. Insert Rute Baru
+3. Update Lokasi
+4. Update Rute
+5. Delete Lokasi
+6. Delete Rute
+7. Cari Rute
+8. Tampil Semua Rute
+9. Tampil Semua Lokasi
+10. Simpan & Keluar
+========================================
+Pilihan: Asal: Tujuan: Jarak (km): ✅ Rute ditambahkan: L001 → L501 = 12.5 km
+⏱️  Waktu eksekusi: 0.003 ms
+
+================ MENU ================
+1. Insert Lokasi Baru
+2. Insert Rute Baru
+3. Update Lokasi
+4. Update Rute
+5. Delete Lokasi
+6. Delete Rute
+7. Cari Rute
+8. Tampil Semua Rute
+9. Tampil Semua Lokasi
+10. Simpan & Keluar
+========================================
+Pilihan: ID Lokasi yang di-update: Nama Baru: Tipe Baru: ✅ Lokasi L001 berhasil diperbarui!
+⏱️  Waktu eksekusi: 0.001 ms
+
+================ MENU ================
+1. Insert Lokasi Baru
+2. Insert Rute Baru
+3. Update Lokasi
+4. Update Rute
+5. Delete Lokasi
+6. Delete Rute
+7. Cari Rute
+8. Tampil Semua Rute
+9. Tampil Semua Lokasi
+10. Simpan & Keluar
+========================================
+Pilihan: Asal: Tujuan: Jarak Baru (km): ✅ Rute L001 → L501 diperbarui menjadi 15.5 km!
+⏱️  Waktu eksekusi: 0.001 ms
+
+================ MENU ================
+1. Insert Lokasi Baru
+2. Insert Rute Baru
+3. Update Lokasi
+4. Update Rute
+5. Delete Lokasi
+6. Delete Rute
+7. Cari Rute
+8. Tampil Semua Rute
+9. Tampil Semua Lokasi
+10. Simpan & Keluar
+========================================
+Pilihan: Asal: Tujuan: ✅ RUTE DITEMUKAN! Jarak: 15.5 km
+⏱️  Waktu: 0.001 ms
+
+================ MENU ================
+1. Insert Lokasi Baru
+2. Insert Rute Baru
+3. Update Lokasi
+4. Update Rute
+5. Delete Lokasi
+6. Delete Rute
+7. Cari Rute
+8. Tampil Semua Rute
+9. Tampil Semua Lokasi
+10. Simpan & Keluar
+========================================
+Pilihan: Asal: Tujuan: ✅ Rute L001 → L501 berhasil dihapus!
+⏱️  Waktu eksekusi: 0 ms
+
+================ MENU ================
+1. Insert Lokasi Baru
+2. Insert Rute Baru
+3. Update Lokasi
+4. Update Rute
+5. Delete Lokasi
+6. Delete Rute
+7. Cari Rute
+8. Tampil Semua Rute
+9. Tampil Semua Lokasi
+10. Simpan & Keluar
+========================================
+Pilihan: ID Lokasi yang dihapus: ✅ Lokasi L001 beserta rute terkait berhasil dihapus!
+⏱️  Waktu eksekusi: 0.57 ms
+
+================ MENU ================
+1. Insert Lokasi Baru
+2. Insert Rute Baru
+3. Update Lokasi
+4. Update Rute
+5. Delete Lokasi
+6. Delete Rute
+7. Cari Rute
+8. Tampil Semua Rute
+9. Tampil Semua Lokasi
+10. Simpan & Keluar
+========================================
+Pilihan: ✅ Data berhasil disimpan! ⏱️ 6.447 ms
+Terima kasih!

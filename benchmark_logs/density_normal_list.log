@@ -1,0 +1,139 @@
+
+============================================================
+   SISTEM MANAJEMEN RUTE DISTRIBUSI (ADJACENCY LIST)
+============================================================
+✅ Load 100 lokasi
+✅ Load 500 rute
+📊 Memory Usage: 1032 KB
+
+----------------------------------------
+MENU UTAMA:
+1. Insert Lokasi Baru
+2. Insert Rute Baru
+3. Update Lokasi
+4. Update Rute
+5. Delete Lokasi
+6. Delete Rute
+7. Cari Rute
+8. Tampilkan Semua Rute
+9. Tampilkan Semua Lokasi
+10. Simpan & Keluar
+----------------------------------------
+Pilihan [1-10]: Nama Lokasi: Tipe (Gudang/Tujuan): ✅ Lokasi ditambahkan: L101 - NewLoc
+⏱️  Waktu eksekusi: 0.004 ms
+
+----------------------------------------
+MENU UTAMA:
+1. Insert Lokasi Baru
+2. Insert Rute Baru
+3. Update Lokasi
+4. Update Rute
+5. Delete Lokasi
+6. Delete Rute
+7. Cari Rute
+8. Tampilkan Semua Rute
+9. Tampilkan Semua Lokasi
+10. Simpan & Keluar
+----------------------------------------
+Pilihan [1-10]: ID Lokasi Asal: ID Lokasi Tujuan: Jarak (km): ✅ Rute ditambahkan: R0501 (L001 → L101 = 12.5 km)
+⏱️  Waktu eksekusi: 0.001 ms
+
+----------------------------------------
+MENU UTAMA:
+1. Insert Lokasi Baru
+2. Insert Rute Baru
+3. Update Lokasi
+4. Update Rute
+5. Delete Lokasi
+6. Delete Rute
+7. Cari Rute
+8. Tampilkan Semua Rute
+9. Tampilkan Semua Lokasi
+10. Simpan & Keluar
+----------------------------------------
+Pilihan [1-10]: ID Lokasi yang di-update: Nama Baru: Tipe Baru: ✅ Lokasi L001 berhasil diperbarui!
+⏱️  Waktu eksekusi: 0 ms
+
+----------------------------------------
+MENU UTAMA:
+1. Insert Lokasi Baru
+2. Insert Rute Baru
+3. Update Lokasi
+4. Update Rute
+5. Delete Lokasi
+6. Delete Rute
+7. Cari Rute
+8. Tampilkan Semua Rute
+9. Tampilkan Semua Lokasi
+10. Simpan & Keluar
+----------------------------------------
+Pilihan [1-10]: ID Lokasi Asal: ID Lokasi Tujuan: Jarak Baru (km): ✅ Rute L001 → L101 diperbarui menjadi 15.5 km!
+⏱️  Waktu eksekusi: 0 ms
+
+----------------------------------------
+MENU UTAMA:
+1. Insert Lokasi Baru
+2. Insert Rute Baru
+3. Update Lokasi
+4. Update Rute
+5. Delete Lokasi
+6. Delete Rute
+7. Cari Rute
+8. Tampilkan Semua Rute
+9. Tampilkan Semua Lokasi
+10. Simpan & Keluar
+----------------------------------------
+Pilihan [1-10]: ID Lokasi Asal: ID Lokasi Tujuan: ✅ RUTE DITEMUKAN!
+   ID Rute : R0501
+   Asal    : L001
+   Tujuan  : L101
+   Jarak   : 15.5 km
+⏱️  Waktu eksekusi: 0 ms
+
+----------------------------------------
+MENU UTAMA:
+1. Insert Lokasi Baru
+2. Insert Rute Baru
+3. Update Lokasi
+4. Update Rute
+5. Delete Lokasi
+6. Delete Rute
+7. Cari Rute
+8. Tampilkan Semua Rute
+9. Tampilkan Semua Lokasi
+10. Simpan & Keluar
+----------------------------------------
+Pilihan [1-10]: ID Lokasi Asal: ID Lokasi Tujuan: ✅ Rute L001 → L101 berhasil dihapus!
+⏱️  Waktu eksekusi: 0 ms
+
+----------------------------------------
+MENU UTAMA:
+1. Insert Lokasi Baru
+2. Insert Rute Baru
+3. Update Lokasi
+4. Update Rute
+5. Delete Lokasi
+6. Delete Rute
+7. Cari Rute
+8. Tampilkan Semua Rute
+9. Tampilkan Semua Lokasi
+10. Simpan & Keluar
+----------------------------------------
+Pilihan [1-10]: ID Lokasi yang dihapus: ✅ Lokasi L001 beserta rute terkait berhasil dihapus!
+⏱️  Waktu eksekusi: 0.014 ms
+
+----------------------------------------
+MENU UTAMA:
+1. Insert Lokasi Baru
+2. Insert Rute Baru
+3. Update Lokasi
+4. Update Rute
+5. Delete Lokasi
+6. Delete Rute
+7. Cari Rute
+8. Tampilkan Semua Rute
+9. Tampilkan Semua Lokasi
+10. Simpan & Keluar
+----------------------------------------
+Pilihan [1-10]: ✅ Data berhasil disimpan!
+Terima kasih! Program selesai.
