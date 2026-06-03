@@ -51,12 +51,13 @@ def uji_skenario(nama, folder, lokasi, rute):
                               stdin=subprocess.PIPE, 
                               stdout=subprocess.PIPE,
                               stderr=subprocess.PIPE,
-                              text=True)
+                              text=True,
+                              encoding='utf-8')
     
     # Kirim perintah ke program:
-    # 4 (Tampil Rute) + Enter
-    # 6 (Keluar) + Enter
-    commands = "4\n6\n"
+    # 8 (Tampilkan Semua Rute) + Enter
+    # 10 (Simpan & Keluar) + Enter
+    commands = "8\n10\n"
     stdout, stderr = proses.communicate(input=commands)
     
     end_total = time.time()

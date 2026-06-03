@@ -7,16 +7,16 @@ SKENARIO Kecil
 ------------------------------
 Jumlah lokasi: 10
 Jumlah rute  : 30
-Waktu total   : 43.09 ms
+Waktu total   : 8.80 ms
 
 SKENARIO Sedang
 ------------------------------
 Jumlah lokasi: 25
 Jumlah rute  : 66
-Waktu total   : 40.53 ms
+Waktu total   : 8.16 ms
 
 SKENARIO Progress
 ------------------------------
 Jumlah lokasi: 30
 Jumlah rute  : 100
-Waktu total   : 42.80 ms
+Waktu total   : 6.94 ms

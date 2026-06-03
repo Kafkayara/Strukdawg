@@ -4,7 +4,7 @@
 ============================================================
 ✅ Load 100 lokasi
 ✅ Load 3000 rute
-📊 Memory Usage: 1484 KB
+📊 Memory Usage: 1260 KB
 
 ----------------------------------------
 MENU UTAMA:
@@ -14,13 +14,13 @@ MENU UTAMA:
 4. Update Rute
 5. Delete Lokasi
 6. Delete Rute
-7. Cari Rute
+7. Cari Rute (Dijkstra)
 8. Tampilkan Semua Rute
 9. Tampilkan Semua Lokasi
 10. Simpan & Keluar
 ----------------------------------------
 Pilihan [1-10]: Nama Lokasi: Tipe (Gudang/Tujuan): ✅ Lokasi ditambahkan: L101 - NewLoc
-⏱️  Waktu eksekusi: 0.017 ms
+⏱️  Waktu eksekusi: 0.002 ms
 
 ----------------------------------------
 MENU UTAMA:
@@ -30,28 +30,12 @@ MENU UTAMA:
 4. Update Rute
 5. Delete Lokasi
 6. Delete Rute
-7. Cari Rute
+7. Cari Rute (Dijkstra)
 8. Tampilkan Semua Rute
 9. Tampilkan Semua Lokasi
 10. Simpan & Keluar
 ----------------------------------------
 Pilihan [1-10]: ID Lokasi Asal: ID Lokasi Tujuan: Jarak (km): ✅ Rute ditambahkan: R3001 (L001 → L101 = 12.5 km)
-⏱️  Waktu eksekusi: 0.003 ms
-
-----------------------------------------
-MENU UTAMA:
-1. Insert Lokasi Baru
-2. Insert Rute Baru
-3. Update Lokasi
-4. Update Rute
-5. Delete Lokasi
-6. Delete Rute
-7. Cari Rute
-8. Tampilkan Semua Rute
-9. Tampilkan Semua Lokasi
-10. Simpan & Keluar
-----------------------------------------
-Pilihan [1-10]: ID Lokasi yang di-update: Nama Baru: Tipe Baru: ✅ Lokasi L001 berhasil diperbarui!
 ⏱️  Waktu eksekusi: 0.001 ms
 
 ----------------------------------------
@@ -62,7 +46,23 @@ MENU UTAMA:
 4. Update Rute
 5. Delete Lokasi
 6. Delete Rute
-7. Cari Rute
+7. Cari Rute (Dijkstra)
+8. Tampilkan Semua Rute
+9. Tampilkan Semua Lokasi
+10. Simpan & Keluar
+----------------------------------------
+Pilihan [1-10]: ID Lokasi yang di-update: Nama Baru: Tipe Baru: ✅ Lokasi L001 berhasil diperbarui!
+⏱️  Waktu eksekusi: 0 ms
+
+----------------------------------------
+MENU UTAMA:
+1. Insert Lokasi Baru
+2. Insert Rute Baru
+3. Update Lokasi
+4. Update Rute
+5. Delete Lokasi
+6. Delete Rute
+7. Cari Rute (Dijkstra)
 8. Tampilkan Semua Rute
 9. Tampilkan Semua Lokasi
 10. Simpan & Keluar
@@ -78,17 +78,20 @@ MENU UTAMA:
 4. Update Rute
 5. Delete Lokasi
 6. Delete Rute
-7. Cari Rute
+7. Cari Rute (Dijkstra)
 8. Tampilkan Semua Rute
 9. Tampilkan Semua Lokasi
 10. Simpan & Keluar
 ----------------------------------------
 Pilihan [1-10]: ID Lokasi Asal: ID Lokasi Tujuan: ✅ RUTE DITEMUKAN!
-   ID Rute : R3001
-   Asal    : L001
-   Tujuan  : L101
-   Jarak   : 15.5 km
-⏱️  Waktu eksekusi: 0 ms
+   Total Jarak : 15.5 km
+   Jumlah Hop  : 1
+   Jalur       : L001 (L001_Updated) → L101 (NewLoc)
+
+   Detail per segmen:
+   1. L001 → L101 = 15.5 km
+⏱️  Waktu eksekusi: 0.389 ms
+📊 Memory Usage: 1260 KB
 
 ----------------------------------------
 MENU UTAMA:
@@ -98,7 +101,7 @@ MENU UTAMA:
 4. Update Rute
 5. Delete Lokasi
 6. Delete Rute
-7. Cari Rute
+7. Cari Rute (Dijkstra)
 8. Tampilkan Semua Rute
 9. Tampilkan Semua Lokasi
 10. Simpan & Keluar
@@ -114,13 +117,13 @@ MENU UTAMA:
 4. Update Rute
 5. Delete Lokasi
 6. Delete Rute
-7. Cari Rute
+7. Cari Rute (Dijkstra)
 8. Tampilkan Semua Rute
 9. Tampilkan Semua Lokasi
 10. Simpan & Keluar
 ----------------------------------------
 Pilihan [1-10]: ID Lokasi yang dihapus: ✅ Lokasi L001 beserta rute terkait berhasil dihapus!
-⏱️  Waktu eksekusi: 0.074 ms
+⏱️  Waktu eksekusi: 0.02 ms
 
 ----------------------------------------
 MENU UTAMA:
@@ -130,7 +133,7 @@ MENU UTAMA:
 4. Update Rute
 5. Delete Lokasi
 6. Delete Rute
-7. Cari Rute
+7. Cari Rute (Dijkstra)
 8. Tampilkan Semua Rute
 9. Tampilkan Semua Lokasi
 10. Simpan & Keluar

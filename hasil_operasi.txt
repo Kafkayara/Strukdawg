@@ -6,23 +6,23 @@ HASIL PENGUJIAN OPERASI INSERT & SEARCH
 SKENARIO Kecil
 Jumlah lokasi: 10
 Jumlah rute  : 30
-Insert 1 rute    : 98.445 ms
-Search berhasil  : 55.063 ms
-Search gagal     : 149.532 ms
+Insert 1 rute    : 10.408 ms
+Search berhasil  : 7.446 ms
+Search gagal     : 7.831 ms
 ----------------------------------------
 
 SKENARIO Sedang
 Jumlah lokasi: 25
 Jumlah rute  : 66
-Insert 1 rute    : 39.015 ms
-Search berhasil  : 34.294 ms
-Search gagal     : 36.109 ms
+Insert 1 rute    : 9.900 ms
+Search berhasil  : 8.421 ms
+Search gagal     : 8.637 ms
 ----------------------------------------
 
 SKENARIO Progress
 Jumlah lokasi: 30
 Jumlah rute  : 100
-Insert 1 rute    : 34.085 ms
-Search berhasil  : 32.501 ms
-Search gagal     : 33.834 ms
+Insert 1 rute    : 24.771 ms
+Search berhasil  : 15.548 ms
+Search gagal     : 11.594 ms
 ----------------------------------------

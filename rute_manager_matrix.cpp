@@ -6,6 +6,8 @@
 #include <chrono>
 #include <iomanip>
 #include <algorithm>
+#include <queue>   // Untuk priority_queue (Dijkstra)
+#include <limits>  // Untuk numeric_limits
 #ifdef _WIN32
 #include <windows.h>
 #include <psapi.h>
@@ -89,9 +91,9 @@ public:
             }
             fileLokasi.close();
             jumlahLokasi = idx;
-            cout << "✅ Load " << jumlahLokasi << " lokasi\n";
+            cout << "Load " << jumlahLokasi << " lokasi\n";
         } else {
-            cout << "❌ File " << FILE_LOKASI << " tidak ditemukan!\n";
+            cout << "File " << FILE_LOKASI << " tidak ditemukan!\n";
         }
         
         matriks.assign(jumlahLokasi, vector<float>(jumlahLokasi, 0.0f));
@@ -126,11 +128,11 @@ public:
             }
             fileRute.close();
             jumlahRute = ruteCount;
-            cout << "✅ Load " << jumlahRute << " rute\n";
+            cout << "Load " << jumlahRute << " rute\n";
         } else {
-            cout << "❌ File " << FILE_RUTE << " tidak ditemukan!\n";
+            cout << "File " << FILE_RUTE << " tidak ditemukan!\n";
         }
-        cout << "📊 Memory Usage: " << getMemoryUsage() / 1024.0 << " KB" << endl;
+        cout << "Memory Usage: " << getMemoryUsage() / 1024.0 << " KB" << endl;
     }
 
     void saveData() {
@@ -162,7 +164,7 @@ public:
         
         auto end = high_resolution_clock::now();
         auto duration = duration_cast<microseconds>(end - start);
-        cout << "✅ Data berhasil disimpan! ⏱️ " << duration.count() / 1000.0 << " ms\n";
+        cout << "Data berhasil disimpan! " << duration.count() / 1000.0 << " ms\n";
     }
 
     bool insertLokasi(string nama, string tipe) {
@@ -183,8 +185,8 @@ public:
         
         auto end = high_resolution_clock::now();
         auto duration = duration_cast<microseconds>(end - start);
-        cout << "✅ Lokasi ditambahkan: " << id << " - " << nama << endl;
-        cout << "⏱️  Waktu eksekusi: " << duration.count() / 1000.0 << " ms" << endl;
+        cout << "Lokasi ditambahkan: " << id << " - " << nama << endl;
+        cout << "Waktu eksekusi: " << duration.count() / 1000.0 << " ms" << endl;
         return true;
     }
 
@@ -192,11 +194,11 @@ public:
         auto start = high_resolution_clock::now();
         
         if (idKeIndex.find(asal) == idKeIndex.end()) {
-            cout << "❌ Lokasi asal " << asal << " tidak ditemukan!\n";
+            cout << "Lokasi asal " << asal << " tidak ditemukan!\n";
             return false;
         }
         if (idKeIndex.find(tujuan) == idKeIndex.end()) {
-            cout << "❌ Lokasi tujuan " << tujuan << " tidak ditemukan!\n";
+            cout << "Lokasi tujuan " << tujuan << " tidak ditemukan!\n";
             return false;
         }
         
@@ -214,54 +216,54 @@ public:
         
         auto end = high_resolution_clock::now();
         auto duration = duration_cast<microseconds>(end - start);
-        cout << "✅ Rute ditambahkan: " << asal << " → " << tujuan << " = " << jarak << " km\n";
-        cout << "⏱️  Waktu eksekusi: " << duration.count() / 1000.0 << " ms" << endl;
+        cout << "Rute ditambahkan: " << asal << " ke " << tujuan << " = " << jarak << " km\n";
+        cout << "Waktu eksekusi: " << duration.count() / 1000.0 << " ms" << endl;
         return true;
     }
 
     bool updateLokasi(string id, string namaBaru, string tipeBaru) {
         auto start = high_resolution_clock::now();
         if (daftarLokasi.find(id) == daftarLokasi.end()) {
-            cout << "❌ Error: Lokasi " << id << " tidak ditemukan!\n";
+            cout << "Error: Lokasi " << id << " tidak ditemukan!\n";
             return false;
         }
         daftarLokasi[id].nama = namaBaru;
         daftarLokasi[id].tipe = tipeBaru;
         auto end = high_resolution_clock::now();
         auto duration = duration_cast<microseconds>(end - start);
-        cout << "✅ Lokasi " << id << " berhasil diperbarui!\n";
-        cout << "⏱️  Waktu eksekusi: " << duration.count() / 1000.0 << " ms" << endl;
+        cout << "Lokasi " << id << " berhasil diperbarui!\n";
+        cout << "Waktu eksekusi: " << duration.count() / 1000.0 << " ms" << endl;
         return true;
     }
 
     bool updateRute(string asal, string tujuan, float jarakBaru) {
         auto start = high_resolution_clock::now();
         if (idKeIndex.find(asal) == idKeIndex.end() || idKeIndex.find(tujuan) == idKeIndex.end()) {
-            cout << "❌ Error: Lokasi asal/tujuan tidak ditemukan!\n";
+            cout << "Error: Lokasi asal/tujuan tidak ditemukan!\n";
             return false;
         }
         int i = idKeIndex[asal];
         int j = idKeIndex[tujuan];
         if (matriks[i][j] == 0.0f) {
-            cout << "❌ Rute " << asal << " → " << tujuan << " tidak ditemukan!\n";
+            cout << "Rute " << asal << " ke " << tujuan << " tidak ditemukan!\n";
             return false;
         }
         matriks[i][j] = jarakBaru;
         auto end = high_resolution_clock::now();
         auto duration = duration_cast<microseconds>(end - start);
-        cout << "✅ Rute " << asal << " → " << tujuan << " diperbarui menjadi " << jarakBaru << " km!\n";
-        cout << "⏱️  Waktu eksekusi: " << duration.count() / 1000.0 << " ms" << endl;
+        cout << "Rute " << asal << " ke " << tujuan << " diperbarui menjadi " << jarakBaru << " km!\n";
+        cout << "Waktu eksekusi: " << duration.count() / 1000.0 << " ms" << endl;
         return true;
     }
 
     bool deleteLokasi(string id) {
         auto start = high_resolution_clock::now();
         if (idKeIndex.find(id) == idKeIndex.end()) {
-            cout << "❌ Error: Lokasi " << id << " tidak ditemukan!\n";
+            cout << "Error: Lokasi " << id << " tidak ditemukan!\n";
             return false;
         }
         int delIdx = idKeIndex[id];
-        
+
         daftarLokasi.erase(id);
         
         matriks.erase(matriks.begin() + delIdx);
@@ -297,29 +299,29 @@ public:
         
         auto end = high_resolution_clock::now();
         auto duration = duration_cast<microseconds>(end - start);
-        cout << "✅ Lokasi " << id << " beserta rute terkait berhasil dihapus!\n";
-        cout << "⏱️  Waktu eksekusi: " << duration.count() / 1000.0 << " ms" << endl;
+        cout << "Lokasi " << id << " beserta rute terkait berhasil dihapus!\n";
+        cout << "Waktu eksekusi: " << duration.count() / 1000.0 << " ms" << endl;
         return true;
     }
 
     bool deleteRute(string asal, string tujuan) {
         auto start = high_resolution_clock::now();
         if (idKeIndex.find(asal) == idKeIndex.end() || idKeIndex.find(tujuan) == idKeIndex.end()) {
-            cout << "❌ Error: Rute tidak ditemukan!\n";
+            cout << "Error: Rute tidak ditemukan!\n";
             return false;
         }
         int i = idKeIndex[asal];
         int j = idKeIndex[tujuan];
         if (matriks[i][j] == 0.0f) {
-            cout << "❌ Rute " << asal << " → " << tujuan << " tidak ditemukan!\n";
+            cout << "Rute " << asal << " ke " << tujuan << " tidak ditemukan!\n";
             return false;
         }
         matriks[i][j] = 0.0f;
         jumlahRute--;
         auto end = high_resolution_clock::now();
         auto duration = duration_cast<microseconds>(end - start);
-        cout << "✅ Rute " << asal << " → " << tujuan << " berhasil dihapus!\n";
-        cout << "⏱️  Waktu eksekusi: " << duration.count() / 1000.0 << " ms" << endl;
+        cout << "Rute " << asal << " ke " << tujuan << " berhasil dihapus!\n";
+        cout << "Waktu eksekusi: " << duration.count() / 1000.0 << " ms" << endl;
         return true;
     }
 
@@ -330,8 +332,8 @@ public:
             idKeIndex.find(tujuan) == idKeIndex.end()) {
             auto end = high_resolution_clock::now();
             auto duration = duration_cast<microseconds>(end - start);
-            cout << "❌ Lokasi tidak ditemukan!\n";
-            cout << "⏱️  Waktu: " << duration.count() / 1000.0 << " ms\n";
+            cout << "Lokasi tidak ditemukan!\n";
+            cout << "Waktu: " << duration.count() / 1000.0 << " ms\n";
             return;
         }
         
@@ -343,11 +345,11 @@ public:
         auto duration = duration_cast<microseconds>(end - start);
         
         if (jarak > 0) {
-            cout << "✅ RUTE DITEMUKAN! Jarak: " << jarak << " km\n";
+            cout << "RUTE DITEMUKAN! Jarak: " << jarak << " km\n";
         } else {
-            cout << "❌ Rute tidak ditemukan!\n";
+            cout << "Rute tidak ditemukan!\n";
         }
-        cout << "⏱️  Waktu: " << duration.count() / 1000.0 << " ms\n";
+        cout << "Waktu: " << duration.count() / 1000.0 << " ms\n";
     }
 
     void displayAllRute() {
@@ -358,7 +360,7 @@ public:
         for (int i = 0; i < jumlahLokasi; i++) {
             for (int j = 0; j < jumlahLokasi; j++) {
                 if (matriks[i][j] > 0) {
-                    cout << indexKeId[i] << " → " << indexKeId[j] 
+                    cout << indexKeId[i] << " ke " << indexKeId[j]
                          << " : " << matriks[i][j] << " km\n";
                     total++;
                 }
@@ -369,7 +371,7 @@ public:
         auto duration = duration_cast<microseconds>(end - start);
         
         cout << "Total: " << total << " rute\n";
-        cout << "⏱️  Waktu tampil: " << duration.count() / 1000.0 << " ms\n";
+        cout << "Waktu tampil: " << duration.count() / 1000.0 << " ms\n";
     }
 
     void displayAllLokasi() {
@@ -384,7 +386,97 @@ public:
         
         auto end = high_resolution_clock::now();
         auto duration = duration_cast<microseconds>(end - start);
-        cout << "⏱️  Waktu tampil: " << duration.count() / 1000.0 << " ms\n";
+        cout << "Waktu tampil: " << duration.count() / 1000.0 << " ms\n";
+    }
+
+    void cariJalurTerpendek(string asal, string tujuan) {
+        auto start = high_resolution_clock::now();
+
+        if (idKeIndex.find(asal) == idKeIndex.end()) {
+            cout << "Lokasi asal " << asal << " tidak ditemukan!" << endl;
+            auto end = high_resolution_clock::now();
+            cout << "Waktu eksekusi: " << duration_cast<microseconds>(end - start).count() / 1000.0 << " ms" << endl;
+            return;
+        }
+        if (idKeIndex.find(tujuan) == idKeIndex.end()) {
+            cout << "Lokasi tujuan " << tujuan << " tidak ditemukan!" << endl;
+            auto end = high_resolution_clock::now();
+            cout << "Waktu eksekusi: " << duration_cast<microseconds>(end - start).count() / 1000.0 << " ms" << endl;
+            return;
+        }
+
+        int src = idKeIndex[asal];
+        int dst = idKeIndex[tujuan];
+
+        // Dijkstra's Algorithm using adjacency matrix
+        vector<float> dist(jumlahLokasi, numeric_limits<float>::infinity());
+        vector<int> prev(jumlahLokasi, -1);
+        dist[src] = 0;
+
+        // Min-heap: (jarak, index)
+        priority_queue<pair<float, int>, vector<pair<float, int>>, greater<pair<float, int>>> pq;
+        pq.push({0, src});
+
+        while (!pq.empty()) {
+            auto [d, u] = pq.top();
+            pq.pop();
+
+            if (d > dist[u]) continue; // skip stale entry
+            if (u == dst) break;       // found shortest path
+
+            for (int v = 0; v < jumlahLokasi; v++) {
+                if (matriks[u][v] > 0) {
+                    float newDist = dist[u] + matriks[u][v];
+                    if (newDist < dist[v]) {
+                        dist[v] = newDist;
+                        prev[v] = u;
+                        pq.push({newDist, v});
+                    }
+                }
+            }
+        }
+
+        auto end = high_resolution_clock::now();
+        auto duration = duration_cast<microseconds>(end - start);
+
+        if (dist[dst] == numeric_limits<float>::infinity()) {
+            cout << "Rute dari " << asal << " ke " << tujuan << " tidak ditemukan" << endl;
+        } else {
+            // Reconstruct path
+            vector<int> path;
+            int current = dst;
+            while (current != src) {
+                path.push_back(current);
+                current = prev[current];
+            }
+            path.push_back(src);
+            reverse(path.begin(), path.end());
+
+            cout << "RUTE DITEMUKAN!" << endl;
+            cout << "   Total Jarak : " << dist[dst] << " km" << endl;
+            cout << "   Jumlah Hop  : " << path.size() - 1 << endl;
+            cout << "   Jalur       : ";
+            for (size_t i = 0; i < path.size(); i++) {
+                string id = indexKeId[path[i]];
+                if (daftarLokasi.count(id))
+                    cout << id << " (" << daftarLokasi[id].nama << ")";
+                else
+                    cout << id;
+                if (i < path.size() - 1) cout << " ke ";
+            }
+            cout << endl;
+
+            // Detail per-hop
+            cout << "\n   Detail per segmen:" << endl;
+            for (size_t i = 0; i < path.size() - 1; i++) {
+                string fromId = indexKeId[path[i]];
+                string toId = indexKeId[path[i+1]];
+                float segDist = matriks[path[i]][path[i+1]];
+                cout << "   " << (i+1) << ". " << fromId << " ke " << toId << " = " << segDist << " km" << endl;
+            }
+        }
+        cout << "Waktu eksekusi: " << duration.count() / 1000.0 << " ms" << endl;
+        cout << "Memory Usage: " << getMemoryUsage() / 1024.0 << " KB" << endl;
     }
 };
 
@@ -404,12 +496,12 @@ int main() {
         cout << "4. Update Rute\n";
         cout << "5. Delete Lokasi\n";
         cout << "6. Delete Rute\n";
-        cout << "7. Cari Rute\n";
+        cout << "7. Cari Rute (Dijkstra)\n";
         cout << "8. Tampil Semua Rute\n";
         cout << "9. Tampil Semua Lokasi\n";
         cout << "10. Simpan & Keluar\n";
         cout << "========================================\n";
-        cout << "Pilihan: ";
+        cout << "Pilihan [1-10]: ";
         cin >> pilihan;
         
         switch(pilihan) {
@@ -481,7 +573,7 @@ int main() {
                 cin >> asal;
                 cout << "Tujuan: ";
                 cin >> tujuan;
-                manager.searchRute(asal, tujuan);
+                manager.cariJalurTerpendek(asal, tujuan);
                 break;
             }
             case 8:

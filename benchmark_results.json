@@ -3,182 +3,182 @@
         "list": {
             "num_locations": 10,
             "num_routes": 30,
-            "initial_mem_kb": 916.0,
-            "insert_lokasi": 0.004,
-            "insert_rute": 0.001,
+            "initial_mem_kb": 672.0,
+            "insert_lokasi": 0.018,
+            "insert_rute": 0.0,
             "update_lokasi": 0.0,
             "update_rute": 0.0,
-            "search_rute": 0.0,
-            "delete_rute": 0.001,
-            "delete_lokasi": 0.009
+            "search_rute": 0.024,
+            "delete_rute": 0.0,
+            "delete_lokasi": 0.002
         },
         "matrix": {
             "num_locations": 10,
             "num_routes": 30,
-            "initial_mem_kb": 920.0,
-            "insert_lokasi": 0.009,
+            "initial_mem_kb": 680.0,
+            "insert_lokasi": 0.008,
             "insert_rute": 0.0,
             "update_lokasi": 0.0,
             "update_rute": 0.0,
-            "search_rute": 0.0,
+            "search_rute": 0.004,
             "delete_rute": 0.0,
-            "delete_lokasi": 0.019
+            "delete_lokasi": 0.009
         }
     },
     "Sedang (V=50, E=150)": {
         "list": {
             "num_locations": 50,
             "num_routes": 150,
-            "initial_mem_kb": 968.0,
-            "insert_lokasi": 0.005,
+            "initial_mem_kb": 728.0,
+            "insert_lokasi": 0.002,
             "insert_rute": 0.001,
             "update_lokasi": 0.0,
             "update_rute": 0.0,
-            "search_rute": 0.0,
+            "search_rute": 0.08,
             "delete_rute": 0.001,
-            "delete_lokasi": 0.009
+            "delete_lokasi": 0.005
         },
         "matrix": {
             "num_locations": 50,
             "num_routes": 150,
-            "initial_mem_kb": 956.0,
-            "insert_lokasi": 0.018,
+            "initial_mem_kb": 736.0,
+            "insert_lokasi": 0.02,
             "insert_rute": 0.0,
             "update_lokasi": 0.0,
-            "update_rute": 0.0,
-            "search_rute": 0.0,
+            "update_rute": 0.005,
+            "search_rute": 0.015,
             "delete_rute": 0.0,
-            "delete_lokasi": 0.027
+            "delete_lokasi": 0.026
         }
     },
     "Progress (V=100, E=400)": {
         "list": {
             "num_locations": 100,
             "num_routes": 400,
-            "initial_mem_kb": 1028.0,
-            "insert_lokasi": 0.007,
-            "insert_rute": 0.002,
+            "initial_mem_kb": 800.0,
+            "insert_lokasi": 0.002,
+            "insert_rute": 0.001,
             "update_lokasi": 0.0,
             "update_rute": 0.0,
-            "search_rute": 0.0,
-            "delete_rute": 0.001,
-            "delete_lokasi": 0.021
+            "search_rute": 0.145,
+            "delete_rute": 0.0,
+            "delete_lokasi": 0.006
         },
         "matrix": {
             "num_locations": 100,
             "num_routes": 400,
-            "initial_mem_kb": 996.0,
-            "insert_lokasi": 0.08,
-            "insert_rute": 0.001,
+            "initial_mem_kb": 828.0,
+            "insert_lokasi": 0.049,
+            "insert_rute": 0.0,
             "update_lokasi": 0.0,
             "update_rute": 0.0,
-            "search_rute": 0.0,
+            "search_rute": 0.019,
             "delete_rute": 0.0,
-            "delete_lokasi": 0.076
+            "delete_lokasi": 0.054
         }
     },
     "Besar (V=500, E=2000)": {
         "list": {
             "num_locations": 500,
             "num_routes": 2000,
-            "initial_mem_kb": 1324.0,
-            "insert_lokasi": 0.007,
+            "initial_mem_kb": 1176.0,
+            "insert_lokasi": 0.111,
             "insert_rute": 0.002,
-            "update_lokasi": 0.001,
+            "update_lokasi": 0.0,
             "update_rute": 0.0,
-            "search_rute": 0.0,
-            "delete_rute": 0.001,
-            "delete_lokasi": 0.089
+            "search_rute": 0.805,
+            "delete_rute": 0.0,
+            "delete_lokasi": 0.025
         },
         "matrix": {
             "num_locations": 500,
             "num_routes": 2000,
-            "initial_mem_kb": 2284.0,
-            "insert_lokasi": 0.659,
+            "initial_mem_kb": 3564.0,
+            "insert_lokasi": 0.92,
             "insert_rute": 0.003,
-            "update_lokasi": 0.001,
-            "update_rute": 0.001,
-            "search_rute": 0.001,
-            "delete_rute": 0.0,
-            "delete_lokasi": 0.57
+            "update_lokasi": 0.017,
+            "update_rute": 0.0,
+            "search_rute": 0.579,
+            "delete_rute": 0.001,
+            "delete_lokasi": 0.635
         }
     },
     "Density Sparse (V=100, E=150)": {
         "list": {
             "num_locations": 100,
             "num_routes": 150,
-            "initial_mem_kb": 980.0,
-            "insert_lokasi": 0.007,
-            "insert_rute": 0.002,
+            "initial_mem_kb": 740.0,
+            "insert_lokasi": 0.003,
+            "insert_rute": 0.001,
             "update_lokasi": 0.0,
             "update_rute": 0.0,
-            "search_rute": 0.0,
+            "search_rute": 0.039,
             "delete_rute": 0.001,
-            "delete_lokasi": 0.013
+            "delete_lokasi": 0.007
         },
         "matrix": {
             "num_locations": 100,
             "num_routes": 150,
-            "initial_mem_kb": 1000.0,
-            "insert_lokasi": 0.053,
-            "insert_rute": 0.0,
-            "update_lokasi": 0.001,
-            "update_rute": 0.001,
-            "search_rute": 0.0,
+            "initial_mem_kb": 844.0,
+            "insert_lokasi": 0.065,
+            "insert_rute": 0.001,
+            "update_lokasi": 0.0,
+            "update_rute": 0.0,
+            "search_rute": 0.005,
             "delete_rute": 0.0,
-            "delete_lokasi": 0.055
+            "delete_lokasi": 0.068
         }
     },
     "Density Normal (V=100, E=500)": {
         "list": {
             "num_locations": 100,
             "num_routes": 500,
-            "initial_mem_kb": 1032.0,
-            "insert_lokasi": 0.004,
+            "initial_mem_kb": 800.0,
+            "insert_lokasi": 0.003,
             "insert_rute": 0.001,
             "update_lokasi": 0.0,
             "update_rute": 0.0,
-            "search_rute": 0.0,
-            "delete_rute": 0.0,
-            "delete_lokasi": 0.014
+            "search_rute": 0.156,
+            "delete_rute": 0.001,
+            "delete_lokasi": 0.007
         },
         "matrix": {
             "num_locations": 100,
             "num_routes": 500,
-            "initial_mem_kb": 992.0,
-            "insert_lokasi": 0.081,
+            "initial_mem_kb": 832.0,
+            "insert_lokasi": 0.071,
             "insert_rute": 0.0,
             "update_lokasi": 0.0,
-            "update_rute": 0.001,
-            "search_rute": 0.0,
+            "update_rute": 0.0,
+            "search_rute": 0.032,
             "delete_rute": 0.0,
-            "delete_lokasi": 0.079
+            "delete_lokasi": 0.068
         }
     },
     "Density Dense (V=100, E=3000)": {
         "list": {
             "num_locations": 100,
             "num_routes": 3000,
-            "initial_mem_kb": 1484.0,
-            "insert_lokasi": 0.017,
-            "insert_rute": 0.003,
-            "update_lokasi": 0.001,
+            "initial_mem_kb": 1260.0,
+            "insert_lokasi": 0.002,
+            "insert_rute": 0.001,
+            "update_lokasi": 0.0,
             "update_rute": 0.0,
-            "search_rute": 0.0,
+            "search_rute": 0.389,
             "delete_rute": 0.001,
-            "delete_lokasi": 0.074
+            "delete_lokasi": 0.02
         },
         "matrix": {
             "num_locations": 100,
             "num_routes": 3000,
-            "initial_mem_kb": 992.0,
-            "insert_lokasi": 0.084,
-            "insert_rute": 0.002,
-            "update_lokasi": 0.001,
+            "initial_mem_kb": 836.0,
+            "insert_lokasi": 0.075,
+            "insert_rute": 0.0,
+            "update_lokasi": 0.0,
             "update_rute": 0.0,
-            "search_rute": 0.001,
+            "search_rute": 0.066,
             "delete_rute": 0.0,
-            "delete_lokasi": 0.082
+            "delete_lokasi": 0.066
         }
     }
 }

@@ -4,7 +4,7 @@
 ============================================================
 ✅ Load 50 lokasi
 ✅ Load 150 rute
-📊 Memory Usage: 968 KB
+📊 Memory Usage: 720 KB
 
 ----------------------------------------
 MENU UTAMA:
@@ -14,13 +14,13 @@ MENU UTAMA:
 4. Update Rute
 5. Delete Lokasi
 6. Delete Rute
-7. Cari Rute
+7. Cari Rute (Dijkstra)
 8. Tampilkan Semua Rute
 9. Tampilkan Semua Lokasi
 10. Simpan & Keluar
 ----------------------------------------
 Pilihan [1-10]: Nama Lokasi: Tipe (Gudang/Tujuan): ✅ Lokasi ditambahkan: L051 - NewLoc
-⏱️  Waktu eksekusi: 0.005 ms
+⏱️  Waktu eksekusi: 0.002 ms
 
 ----------------------------------------
 MENU UTAMA:
@@ -30,7 +30,7 @@ MENU UTAMA:
 4. Update Rute
 5. Delete Lokasi
 6. Delete Rute
-7. Cari Rute
+7. Cari Rute (Dijkstra)
 8. Tampilkan Semua Rute
 9. Tampilkan Semua Lokasi
 10. Simpan & Keluar
@@ -46,7 +46,7 @@ MENU UTAMA:
 4. Update Rute
 5. Delete Lokasi
 6. Delete Rute
-7. Cari Rute
+7. Cari Rute (Dijkstra)
 8. Tampilkan Semua Rute
 9. Tampilkan Semua Lokasi
 10. Simpan & Keluar
@@ -62,7 +62,7 @@ MENU UTAMA:
 4. Update Rute
 5. Delete Lokasi
 6. Delete Rute
-7. Cari Rute
+7. Cari Rute (Dijkstra)
 8. Tampilkan Semua Rute
 9. Tampilkan Semua Lokasi
 10. Simpan & Keluar
@@ -78,17 +78,20 @@ MENU UTAMA:
 4. Update Rute
 5. Delete Lokasi
 6. Delete Rute
-7. Cari Rute
+7. Cari Rute (Dijkstra)
 8. Tampilkan Semua Rute
 9. Tampilkan Semua Lokasi
 10. Simpan & Keluar
 ----------------------------------------
 Pilihan [1-10]: ID Lokasi Asal: ID Lokasi Tujuan: ✅ RUTE DITEMUKAN!
-   ID Rute : R0151
-   Asal    : L001
-   Tujuan  : L051
-   Jarak   : 15.5 km
-⏱️  Waktu eksekusi: 0 ms
+   Total Jarak : 15.5 km
+   Jumlah Hop  : 1
+   Jalur       : L001 (L001_Updated) → L051 (NewLoc)
+
+   Detail per segmen:
+   1. L001 → L051 = 15.5 km
+⏱️  Waktu eksekusi: 0.08 ms
+📊 Memory Usage: 728 KB
 
 ----------------------------------------
 MENU UTAMA:
@@ -98,7 +101,7 @@ MENU UTAMA:
 4. Update Rute
 5. Delete Lokasi
 6. Delete Rute
-7. Cari Rute
+7. Cari Rute (Dijkstra)
 8. Tampilkan Semua Rute
 9. Tampilkan Semua Lokasi
 10. Simpan & Keluar
@@ -114,13 +117,13 @@ MENU UTAMA:
 4. Update Rute
 5. Delete Lokasi
 6. Delete Rute
-7. Cari Rute
+7. Cari Rute (Dijkstra)
 8. Tampilkan Semua Rute
 9. Tampilkan Semua Lokasi
 10. Simpan & Keluar
 ----------------------------------------
 Pilihan [1-10]: ID Lokasi yang dihapus: ✅ Lokasi L001 beserta rute terkait berhasil dihapus!
-⏱️  Waktu eksekusi: 0.009 ms
+⏱️  Waktu eksekusi: 0.005 ms
 
 ----------------------------------------
 MENU UTAMA:
@@ -130,7 +133,7 @@ MENU UTAMA:
 4. Update Rute
 5. Delete Lokasi
 6. Delete Rute
-7. Cari Rute
+7. Cari Rute (Dijkstra)
 8. Tampilkan Semua Rute
 9. Tampilkan Semua Lokasi
 10. Simpan & Keluar

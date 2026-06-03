@@ -42,15 +42,16 @@ def uji_skenario(nama, folder, lokasi, rute):
                               stdin=subprocess.PIPE, 
                               stdout=subprocess.PIPE,
                               stderr=subprocess.PIPE,
-                              text=True)
+                              text=True,
+                              encoding='utf-8')
     
     # Kirim perintah: 
     # 2 (Insert Rute) + Enter
     # L001 + Enter (asal)
     # L002 + Enter (tujuan)
     # 1.5 + Enter (jarak)
-    # 6 + Enter (keluar)
-    commands = "2\nL001\nL002\n1.5\n6\n"
+    # 10 + Enter (keluar)
+    commands = "2\nL001\nL002\n1.5\n10\n"
     stdout, stderr = proses.communicate(input=commands)
     
     end = time.time()
@@ -65,10 +66,11 @@ def uji_skenario(nama, folder, lokasi, rute):
     proses = subprocess.Popen([".\\rute_manager.exe"], 
                               stdin=subprocess.PIPE, 
                               stdout=subprocess.PIPE,
-                              text=True)
+                              text=True,
+                              encoding='utf-8')
     
     # Cari rute yang pasti ada (L001 → L002)
-    commands = "3\nL001\nL002\n6\n"
+    commands = "7\nL001\nL002\n10\n"
     stdout, stderr = proses.communicate(input=commands)
     
     end = time.time()
@@ -83,10 +85,11 @@ def uji_skenario(nama, folder, lokasi, rute):
     proses = subprocess.Popen([".\\rute_manager.exe"], 
                               stdin=subprocess.PIPE, 
                               stdout=subprocess.PIPE,
-                              text=True)
+                              text=True,
+                              encoding='utf-8')
     
     # Cari rute yang TIDAK ada (L999 → L999)
-    commands = "3\nL999\nL999\n6\n"
+    commands = "7\nL999\nL999\n10\n"
     stdout, stderr = proses.communicate(input=commands)
     
     end = time.time()
